@@ -20,8 +20,12 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 Fill in (either in English, or in Slovak):
 
-**Application description**: `<fill in>`
+**Application description**: 
+Webová aplikácia poskytuje vizualizáciu cyklotrás v Banskobystrickom okrese. Umožnuje nájsť najbližšie cyklotrasy od zadanej polohy.
+Umožnuje nájsť cyklotrasy, ktoré majú v blízkosti určité typy lokácií ako napr. zdroj pitnej vody.
+Posledný scenár umožní zobraziť iba také cesty, ktoré stihne použivateľ prejsť do určitého času, ktorý si zadá.
+ 
 
-**Data source**: `<fill in>`
+**Data source**: openstreetmap
 
-**Technologies used**: `<fill in>`
+**Technologies used**: node js, postgres, postgis, express, leaflet
