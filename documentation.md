@@ -27,16 +27,17 @@ This is it in action:
 
 - Showing some Tracks
 ![Screenshot](Screenshot_3.png)
-The application has 2 separate parts, the client which is a [frontend web application](#frontend) using mapbox API and mapbox.js and the [backend application](#backend) written in [Rails](http://rubyonrails.org/), backed by PostGIS. The frontend application communicates with backend using a [REST API](#api).
+The application has 2 separate parts, the client which is a [frontend web application](#frontend) using leaflet API and landing.js and [Bootstrap framework](https://getbootstrap.com). [Backend application](#backend) written in [node.js](https://nodejs.org/en/) with [Express](https://expressjs.com/) framework, backed by PostGIS. The frontend application communicates with backend using a [REST API](#api).
 
 # Frontend
 
-The frontend application is a static HTML page (`index.html`), which shows a mapbox.js widget. It is displaying hotels, which are mostly in cities, thus the map style is based on the Emerald style. I modified the style to better highlight main sightseeing points, restaurants and bus stops, since they are all important when selecting a hotel. I also highlighted rails tracks to assist in finding a quiet location.
+The frontend application is a static HTML page (`landing.ejs`), which shows a leaflet.js widget. It is displaying bicycle tracks. Each track has color class based on the ratio of its length in nature reserve.
 
-All relevant frontend code is in `application.js` which is referenced from `index.html`. The frontend code is very simple, its only responsibilities are:
-- detecting user's location, using the standard [web location API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
-- displaying the sidebar panel with hotel list and filtering controls, driving the user interaction and calling the appropriate backend APIs
-- displaying geo features by overlaying the map with a geojson layer, the geojson is provided directly by backend APIs
+All relevant javascript code is in `landing.js` which is referenced from `landing.ejs`. The frontend code is very simple, its only responsibilities are:
+- displaying the leaflet map which shows relevant bicycle tracks
+- displaying the sidebar panel user can interact with if he wishes to use features described above like Search for tracks which are near selected amenities, or display nature reserves
+- Make Requests on Server to get relevant tracks
+- Display Tracks on the map which come from server response
 
 # Backend
 
