@@ -14,10 +14,19 @@ This application shows hotels in Bratislava on a map. Most important features ar
 - intelligent ordering - by proximity and by hotel features
 - hotels on the map are color coded by their quality assigned in stars (standard)
 
+This application shows Bicycle Tracks in central Slovakia on map. Most important features are:
+- Place Marker on a Map and search nearest tracks
+- Search Tracks which are near selected amenities
+- Show only tracks which can be completed in selected time
+- Show nature reserves areas
+- Reset map to original state
+- Each track has color atribute class which represents ratio of intersection of length in nature reserve to whole length, blue means almost 0 ratio and red means 80% and more
 This is it in action:
+- Initial State
+![Screenshot](Screenshot_2.png)
 
-![Screenshot](screenshot.png)
-
+- Showing some Tracks
+![Screenshot](Screenshot_3.png)
 The application has 2 separate parts, the client which is a [frontend web application](#frontend) using mapbox API and mapbox.js and the [backend application](#backend) written in [Rails](http://rubyonrails.org/), backed by PostGIS. The frontend application communicates with backend using a [REST API](#api).
 
 # Frontend
