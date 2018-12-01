@@ -65,7 +65,7 @@ In body part of request is the information about the maximal length of the track
 
 `GET /clicked_zones`
 
-### Response
+## Response
 
 API calls return json responses in a array. One record consists of , `tracks` and in query 2 `amenity points`. `Tracks` contains an information about its coordinates and crossing_area. Track attributes are:
 ```
@@ -74,7 +74,7 @@ API calls return json responses in a array. One record consists of , `tracks` an
   "crossing_area": float number, # like 70%
 }
 ```
-### Indexes
+## Indexes
 
 Before adding indexes I searched for the cost of each query.
 
